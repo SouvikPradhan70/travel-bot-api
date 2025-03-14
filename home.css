@@ -1,0 +1,830 @@
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+body {
+    background: url('img/ramMandir.webp') no-repeat center center/cover;
+    background-attachment: fixed; /* Ensures the background remains fixed */
+    overflow: hidden;
+}
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    height: 40px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(252, 231, 200, 0.4);
+    color: black;
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+    z-index: 1000;
+    
+}
+.chatSymbol{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    left: 580px;
+    top: -18px;
+
+}
+
+/* Hero Section (Background Image) */
+#hero {
+    min-height: 100vh;
+    background: url('img/DALL·E\ 2025-01-22\ 14.39.57\ -\ A\ minimalist\ and\ clean\ background\ image\ featuring\ the\ Ram\ Mandir\ in\ Ayodhya\ at\ the\ center.\ The\ temple\ is\ showcased\ with\ subtle\ details\ and\ surrounded\ .webp') no-repeat center center/cover;
+    background-attachment: fixed; /* Ensures the background remains fixed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+#startJourney {
+    margin: 0;
+    padding: 10px 20px;
+}
+.upperText{
+    position: absolute;
+    transform: translateX(-50%);
+    top: 70px;
+    left: 650px;
+    padding:10px;
+    white-space: nowrap;
+   
+}
+.lowerText{
+    position: absolute;
+    transform: translateX(-50%);
+    top: 390px;
+    left: 650px;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px 10px;
+    white-space: nowrap;
+}
+#startJourney{
+    position: absolute;
+    transform: translateX(-50%);
+    top: 455px;
+    left: 650px;
+    background-color:rgb(252, 231, 200) ;
+    border: rgb(252, 231, 200);
+    border-radius: 20px;
+}
+#startJourney:hover {
+    background-color: black; 
+    color: rgb(250, 200, 150);
+    transform: translateX(-50%) scale(1.05); /* Slight zoom effect */
+    cursor:pointer;
+}
+section {
+    padding: 50px;
+    text-align: center;
+    background-color: white;
+}
+
+/* Pseudo-element for Blurred Background */
+#hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/DALL·E\ 2025-01-22\ 14.39.57\ -\ A\ minimalist\ and\ clean\ background\ image\ featuring\ the\ Ram\ Mandir\ in\ Ayodhya\ at\ the\ center.\ The\ temple\ is\ showcased\ with\ subtle\ details\ and\ surrounded\ .webp') 
+        no-repeat center center/cover;
+    backdrop-filter: blur(30px);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Activate Blur Effect */
+.blurred #hero::after {
+    opacity: 1; /* Makes the blurred layer visible */
+}
+
+/* Additional Content Section */
+#extraContent {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.5); 
+    color:white;
+    text-align: center;
+    padding: 50px;
+}
+
+
+
+
+/*2nd section code*/
+#extraContent {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 85px;
+    width: 100%;
+    /* Hide scrollbar */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer */
+}
+
+.scroll-section {
+    display: flex;
+    flex: 0 0 80%;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 60%;
+}
+
+.scroll-section img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.text {
+    text-align: left;
+}
+
+
+/* scroll bar hide code */
+.scroll-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+
+/* for card */
+/* For Card Container */
+.scroll-wrapper {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: scroll;  /* Keep scrolling enabled */
+    overflow-y: hidden;  /* Prevent vertical scrollbar */
+    white-space: nowrap; /* Ensure content stays in one line */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+    margin-top: 95px;
+    height:400px;
+    
+}
+
+/* Scrollable Content */
+.scroll-content {
+    display: flex;
+    gap: 40px; 
+    scroll-behavior: smooth;
+    transition: transform 0.5s ease-in-out;
+    flex-wrap: nowrap;
+    width: max-content; /* Ensures content is wider than the container */
+}
+
+/* Individual Scroll Cards */
+.scroll-card {
+    flex: 0 0 400px;
+    width: 320px;
+    word-wrap: break-word;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    height: 355px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    height: 390px;
+}
+
+
+
+.scroll-card:hover {
+    transform: scale(1.05);
+}
+
+/* Card Image */
+.scroll-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Card Text */
+.card-text {
+    text-align: left;
+    padding-top: 10px;
+
+}
+
+/* Hide scrollbar for Chrome, Edge, Safari */
+.scroll-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* code for stack layout */
+/* Stack Container */
+.stack-container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; /* Align cards in a row */
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    overflow-y: hidden; /* Prevents vertical scrolling */
+    padding: 20px;
+    width: 100%;
+    white-space: nowrap; /* Prevents wrapping */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+    margin-top: 80px;
+}
+.stack-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual Card */
+.stack-card {
+    width: 350px;
+    height: 250px;
+    perspective: 1000px;
+    flex-shrink: 0;  /* Prevents cards from shrinking */
+}
+
+/* Inner Flip Effect */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Flip on Hover */
+.stack-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back Styles */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backface-visibility: hidden;
+}
+
+/* Front Side (Image) */
+.card-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Back Side (Text) */
+.card-back {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    transform: rotateY(180deg);
+    text-align: center;  
+    width: 100%; 
+    box-sizing: border-box; 
+    word-wrap: break-word;  
+    overflow-wrap: break-word;  
+}
+
+.card-back p {
+    margin: 0;
+    padding: 5px;
+    width: 100%;  /* Ensures text takes full width of the container */
+    font-size: 14px;
+    word-break: break-word; /* Ensures long words wrap */
+    white-space: normal; /* Allows text to wrap naturally */
+}
+.card-back {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping within the box */
+}
+
+
+/* about india section */
+.about-india {
+    min-height: 80vh; /* Full-page height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.5); /* Light background */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+/* tricolor code */
+.orange { color: orange; }
+.white { color: white;padding: 0 2px; } 
+.green { color: green; }
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly darker than body */
+    color: white;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    font-size: 22px; /* Increase font size */
+    font-weight: bold;
+}
+
+.footer-left span {
+    font-size: 24px; /* Slightly larger for emphasis */
+    font-weight: bold;
+}
+
+.footer-left .tra { color: orange; }
+.footer-left .velM { color: white; }
+.footer-left .ate { color: green; }
+
+.footer-right {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin-top:20px ;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+.subscribe {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscribe-input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 200px;
+}
+
+.subscribe-button {
+    background: rgb(252, 231, 200, 0.4);
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.5s ease-in-out; /* Add smooth transition */
+    border-radius: 30px;
+}
+
+.subscribe-button:hover {
+    background: linear-gradient(to right, orange 33.33%, white 33.33%, white 66.66%, green 66.66%);
+    color: black; /* Ensures visibility */
+}
+
+
+/* mediaquery all codes */
+@media (max-width: 768px) {
+    body {
+        background: url('img/ramMandir_mobile.webp') no-repeat center center/cover;
+        background-attachment: fixed;
+    }
+    html, body {
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+        width: 100%; /* Ensures content fits the screen */
+    }
+
+    .scroll-wrapper, .scroll-container {
+        overflow-x: auto; /* Enable smooth scrolling only where needed */
+        white-space: nowrap;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centers content horizontally */
+        height: 50px; /* Adjust height as needed */
+        position: relative;
+    }
+
+    .chatSymbol {
+        height: 24px; /* Adjust icon size */
+        width: 24px;
+        position: absolute;
+        left: 350px; /* Position icon to the left */
+        top: 15px;
+    }
+
+    .home-text {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #hero {
+        position: relative;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .upperText {
+        position: absolute;
+        top: 10%; /* Moves text up */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        padding: 10px;
+        width: 90%;
+        line-height: 1.3;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .lowerText {
+        position: absolute;
+        top: 60%; /* Moves text down */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px;
+        width: 90%;
+        line-height: 1.4;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    #startJourney {
+        position: absolute;
+        top: 75%; /* Adjusts button position */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .about-india {
+        min-height: 80vh; /* Full-page height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 5px;
+        background: rgba(0, 0, 0, 0.5); /* Light background */
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 15px;
+    }
+
+    .about-india p {
+        font-size: 14px; /* Reduce text size */
+        color: rgba(255, 255, 255, 0.7); /* Make text lighter */
+        line-height: 1.4; /* Adjust spacing for better readability */
+        padding: 5px; /* Reduce padding */
+        text-align: justify;
+    }
+    .scroll-container {
+        gap: 15px;
+        padding: 10px;
+        margin-top: 50px;
+    }
+
+    .scroll-section {
+        flex: 0 0 100%;
+        height: 180px;
+        padding: 10px;
+        min-width: 80%;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .scroll-section img {
+        width: 250px;
+        height: 160px;
+        margin-right: 0px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .text {
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: white;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+    }
+
+    .text p {
+        display: none; /* Hide paragraph text */
+    }
+
+    /* Directly replace h3 text */
+    .scroll-section:nth-child(1) .text h3 { content: "Ram"; }
+    .scroll-section:nth-child(2) .text h3 { content: "Krishna"; }
+    .scroll-section:nth-child(3) .text h3 { content: "Jagannath"; }
+    .scroll-section:nth-child(4) .text h3 { content: "Taj"; }
+    .scroll-section:nth-child(5) .text h3 { content: "Unity"; }
+    .scroll-section:nth-child(6) .text h3 { content: "Hawa"; }  
+    
+    .scroll-wrapper {
+        margin-top: 50px;
+        height: auto;
+        padding: 10px;
+    }
+
+    .scroll-content {
+        gap: 15px; /* Reduced gap for better spacing */
+        padding: 10px;
+    }
+
+    .scroll-card {
+        flex: 0 0 250px; /* Smaller card size */
+        width: 150px;
+        height: 190px;
+        padding: 5px;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .scroll-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card-text h3 {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 3px 7px;
+        border-radius: 5px;
+        width: fit-content;
+    }
+
+    .card-text p {
+        display: none; /* Hide paragraphs */
+    }
+
+    /* One-word replacements */
+    .scroll-card:nth-child(1) .card-text h3 { content: "Diwali"; }
+    .scroll-card:nth-child(2) .card-text h3 { content: "Durga"; }
+    .scroll-card:nth-child(3) .card-text h3 { content: "Holi"; }
+    .scroll-card:nth-child(4) .card-text h3 { content: "Rath"; }
+    .scroll-card:nth-child(5) .card-text h3 { content: "Kumbh"; }
+    .scroll-card:nth-child(6) .card-text h3 { content: "Ganesh"; }
+
+
+    .stack-container {
+        gap: 15px; /* Reduce gap for better spacing */
+        padding: 10px;
+        justify-content: flex-start;
+        margin-top: 50px;
+    }
+
+    .stack-card {
+        width: 260px; /* Smaller card size */
+        height: 190px;
+        perspective: 800px;
+        flex-shrink: 0;  
+    }
+
+    .card-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+    }
+
+    .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        backface-visibility: hidden;
+    }
+
+    .card-front {
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-front img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .card-back {
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotateY(180deg);
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .card-back h3, .card-back p {
+        display: none; /* Hides the original text */
+    }
+
+    .stack-card:nth-child(1) .card-back::after { content: "Mahaprasad"; }
+    .stack-card:nth-child(2) .card-back::after { content: "Pakhal"; }
+    .stack-card:nth-child(3) .card-back::after { content: "Dahibara"; }
+    .stack-card:nth-child(4) .card-back::after { content: "Panipuri"; }
+    .stack-card:nth-child(5) .card-back::after { content: "VadaPav"; }
+    .stack-card:nth-child(6) .card-back::after { content: "Butter"; }
+
+    .card-back::after {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+    }
+    .footer-container {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+    }
+
+    .footer-left {
+        order: 1; /* Move TravelMate text to the top */
+        font-size: 28px; /* Slightly bigger for better visibility */
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        order: 2;
+    }
+
+    .footer-right p {
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        order: 3;
+        margin-bottom: 10px;
+    }
+
+    .footer-links {
+        order: 4;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer-links li {
+        display: block; /* Show each link on a new line */
+        margin: 5px 0;
+    }
+
+    .subscribe {
+        order: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscribe-input {
+        width: 80%; /* Adjust input width for mobile */
+    }
+
+    .subscribe-button {
+        margin-top: 10px;
+        width: 50%; /* Adjust button width */
+    }
+
+}
+

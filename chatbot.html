@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelers Point</title>
+    <link rel="stylesheet" href="chatBotStyles.css" />
+  </head>
+  <body>
+    <div id="chat-container">
+      <header>
+        TravelMate
+        <a href="Home.html">
+          <img src="img/home.png" alt="Home" class="homeImg" />
+        </a>
+      </header>
+      <div id="chat-window">
+        <div id="messages"></div>
+      </div>
+
+      <!-- Travel Planner Section (Renamed IDs and Classes) -->
+      <div
+        id="travel-planner-container"
+        style="
+          display: none;
+          border: 1px solid #ddd;
+          padding: 15px;
+          border-radius: 10px;
+          margin-top: 10px;
+        "
+      >
+        <h3>📅 Plan Your Trip</h3>
+
+        <!-- Travel Date Input -->
+        <label for="travel-date-input">When are you traveling?</label>
+        <input type="date" id="travel-date-input" required />
+
+        <!-- Number of Days Input -->
+        <label for="travel-days-input">How many days?</label>
+        <input type="number" id="travel-days-input" min="1" required />
+
+        <!-- Destination Selection -->
+        <label>Select destinations:</label>
+        <div id="destination-options-container"></div>
+
+        <!-- Submit Button -->
+        <button id="submit-travel-plan">Generate Travel Plan</button>
+      </div>
+
+      <div id="input-area">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ask about your destination..."
+        />
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+    <script src="chatBotScript.js"></script>
+  </body>
+</html>
