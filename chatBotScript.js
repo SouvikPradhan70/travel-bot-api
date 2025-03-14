@@ -12,7 +12,8 @@ document.getElementById("send-button").addEventListener("click", async () => {
         messagesDiv.appendChild(userMessage);
 
         try {
-            const response = await fetch(`http://localhost:3000/tourist-info?state=${encodeURIComponent(userInput)}`);
+            const apiBaseUrl = "https://travel-api-1ya7.onrender.com"; // Updated API URL
+            const response = await fetch(`${apiBaseUrl}/tourist-info?state=${encodeURIComponent(userInput)}`);
             const data = await response.json();
 
             if (data.spots) {
@@ -41,16 +42,16 @@ document.getElementById("send-button").addEventListener("click", async () => {
                     // 🌄 Place Images (Square Card Grid)
                     if (spot.images && spot.images.length > 0) {
                         const imagesContainer = document.createElement("div");
-                        imagesContainer.style.display = "flex"; // Use flexbox
-                        imagesContainer.style.flexWrap = "wrap"; // Allow wrapping
-                        imagesContainer.style.gap = "5px"; // Reduced gap
+                        imagesContainer.style.display = "flex";
+                        imagesContainer.style.flexWrap = "wrap";
+                        imagesContainer.style.gap = "5px";
                         imagesContainer.style.marginTop = "10px";
-                        imagesContainer.style.justifyContent = "flex-start"; // Align images to the left
+                        imagesContainer.style.justifyContent = "flex-start";
 
                         spot.images.forEach((imgSrc) => {
                             const imgWrapper = document.createElement("div");
-                            imgWrapper.style.width = "130px"; // Square size
-                            imgWrapper.style.height = "130px"; // Square size
+                            imgWrapper.style.width = "130px";
+                            imgWrapper.style.height = "130px";
                             imgWrapper.style.borderRadius = "10px";
                             imgWrapper.style.overflow = "hidden";
                             imgWrapper.style.boxShadow = "0px 2px 4px rgba(0,0,0,0.2)";
@@ -154,6 +155,7 @@ document.getElementById("user-input").addEventListener("keypress", (event) => {
         document.getElementById("send-button").click();
     }
 });
+
 // Event listener for "Generate Travel Plan" button
 document.getElementById("submit-travel-plan").addEventListener("click", () => {
     const messagesDiv = document.getElementById("messages");
@@ -202,11 +204,4 @@ document.getElementById("submit-travel-plan").addEventListener("click", () => {
     // Add the travel plan to chat window
     messagesDiv.appendChild(travelPlanMessage);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
-
-    // Clear input fields after submission
-    document.getElementById("travel-date-input").value = "";
-    document.getElementById("travel-days-input").value = "";
-    document.querySelectorAll(".destination-checkbox").forEach((checkbox) => {
-        checkbox.checked = false;
-    });
 });
