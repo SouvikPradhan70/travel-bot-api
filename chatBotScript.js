@@ -19,7 +19,7 @@ async function sendMessage() {
         messagesDiv.appendChild(userMessage);
 
         try {
-            const apiBaseUrl = "http://localhost:3000";  // Local API
+            const apiBaseUrl = "https://travel-api-1ya7.onrender.com";  // Hosted API
             const response = await fetch(`${apiBaseUrl}/tourist-info?state=${encodeURIComponent(userInput)}`);
             const data = await response.json();
 
