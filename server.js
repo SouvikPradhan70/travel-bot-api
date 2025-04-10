@@ -21,7 +21,17 @@ const touristData = {
                     "/img/baga_beach3.webp"
                 ],
                 description: "Baga Beach is one of the most popular beaches in North Goa, known for its golden sands, lively shacks, and thrilling water sports. Visitors can enjoy parasailing, jet skiing, and banana boat rides, or relax by the beachside cafes. The nightlife at Baga is equally vibrant, with clubs like Tito’s and Mambo’s attracting party lovers.",
-                souvenir: "Handmade seashell jewelry."
+                souvenir: "Handmade seashell jewelry.",
+                nearest_locations: {
+                    bus_stop: "Baga Bus Stop - 1.5 km",
+                    railway_station: "Thivim Railway Station - 19 km",
+                    hospital: "Primary Health Centre - 3 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Basilica of Bom Jesus",
@@ -32,7 +42,17 @@ const touristData = {
                     "/img/basilica3.jpg"
                 ],
                 description: "A UNESCO World Heritage Site, the Basilica of Bom Jesus is one of Goa’s most revered churches, housing the mortal remains of St. Francis Xavier. Built in 1605, this baroque-style church is an architectural marvel, attracting pilgrims and history enthusiasts alike.",
-                souvenir: "Religious artifacts and wooden crosses."
+                souvenir: "Religious artifacts and wooden crosses.",
+                nearest_locations: {
+                    bus_stop: "Old Goa Bus Stop - 500m",
+                    railway_station: "Karmali Railway Station - 10 km",
+                    hospital: "Old Goa Medical Centre - 2 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Dudhsagar Waterfalls",
@@ -43,7 +63,18 @@ const touristData = {
                     "/img/Dudhsagar_Falls3.webp"
                 ],
                 description: "Dudhsagar Falls, meaning ‘Sea of Milk,’ is one of India’s tallest waterfalls, cascading from a height of 310 meters. Located in the Bhagwan Mahavir Wildlife Sanctuary, the waterfall is a popular trekking and sightseeing destination, best visited during the monsoon season.",
-                souvenir: "Locally made bamboo crafts."
+                souvenir: "Locally made bamboo crafts.",
+                nearest_locations: {
+                    bus_stop: "Mollem Bus Stop - 12 km",
+                    railway_station: "Kulem Railway Station - 14 km",
+                    hospital: "Mollem Health Centre - 15 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
+
             },
             {
                 name: "Fort Aguada",
@@ -54,7 +85,17 @@ const touristData = {
                     "/img/Fort_Aguada3.webp"
                 ],
                 description: "Built by the Portuguese in the 17th century, Fort Aguada is a well-preserved fort overlooking the Arabian Sea. It once served as a crucial defense structure and now stands as a popular tourist attraction with breathtaking sunset views.",
-                souvenir: "Miniature fort models."
+                souvenir: "Miniature fort models.",
+                nearest_locations: {
+                    bus_stop: "Mollem Bus Stop - 12 km",
+                    railway_station: "Kulem Railway Station - 14 km",
+                    hospital: "Mollem Health Centre - 15 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Anjuna Flea Market",
@@ -65,7 +106,17 @@ const touristData = {
                     "/img/fleaMarket3.jpg"
                 ],
                 description: "The Anjuna Flea Market is a shopper’s paradise, offering everything from bohemian jewelry to handcrafted souvenirs. Held every Wednesday, this market attracts both tourists and locals looking for unique finds and a lively shopping experience.",
-                souvenir: "Handwoven bags and boho jewelry."
+                souvenir: "Handwoven bags and boho jewelry.",
+                nearest_locations: {
+                    bus_stop: "Mollem Bus Stop - 12 km",
+                    railway_station: "Kulem Railway Station - 14 km",
+                    hospital: "Mollem Health Centre - 15 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Palolem Beach",
@@ -76,7 +127,17 @@ const touristData = {
                     "/img/palolem3.jpg"
                 ],
                 description: "Palolem Beach is a pristine stretch of golden sand in South Goa, known for its peaceful ambiance, colorful beach huts, and kayaking experiences. The Silent Noise Parties held here are famous for offering a unique nightlife experience where guests wear wireless headphones to dance under the stars.",
-                souvenir: "Handmade coconut shell products."
+                souvenir: "Handmade coconut shell products.",
+                nearest_locations: {
+                    bus_stop: "Mollem Bus Stop - 12 km",
+                    railway_station: "Kulem Railway Station - 14 km",
+                    hospital: "Mollem Health Centre - 15 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             }
         ],
         cost: "₹35,000 - ₹40,000/person",
@@ -122,7 +183,17 @@ const touristData = {
                     "/img/puri_seaBeach.jpg"
                 ],
                 description: "The Puri Jagannath Mandir is one of the most revered Hindu temples in India, dedicated to Lord Jagannath, a form of Lord Vishnu. Located in Puri, Odisha, it is part of the Char Dham pilgrimage sites. The temple, built in the 12th century by King Anantavarman Chodaganga Deva, is famous for its annual Rath Yatra (Chariot Festival), where the deities—Lord Jagannath, Balabhadra, and Subhadra—are taken on grand chariots through the streets. The temple's Mahaprasad is considered sacred, and its mystical architectural features, such as the flag always flying against the wind, add to its spiritual significance. The temple is open only to Hindus, and its rich traditions continue to attract millions of devotees.",
-                souvenir: "Handmade wooden idols of Lord Jagannath."
+                souvenir: "Handmade wooden idols of Lord Jagannath.",
+                nearest_locations: {
+                    bus_stop: "Puri Bus Stand - 2 km",
+                    railway_station: "Puri Railway Station - 1.5 km",
+                    hospital: "District Headquarters Hospital - 3 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Konark Sun Temple",
@@ -134,7 +205,17 @@ const touristData = {
                     "/img/konark_temple4.jpg"
                 ],
                 description: "The Konark Sun Temple, a UNESCO World Heritage Site in Odisha, is a 13th-century architectural marvel built by King Narasimhadeva I of the Eastern Ganga dynasty. Designed in the shape of a colossal chariot of the Sun God Surya, it features intricately carved wheels and sculptures depicting divine, human, and celestial figures. The temple is an outstanding example of Kalinga architecture and remains a major tourist attraction.",
-                souvenir: "Miniature stone carvings of the temple."
+                souvenir: "Miniature stone carvings of the temple.",
+                nearest_locations: {
+                    bus_stop: "Konark Bus Stop - 1 km",
+                    railway_station: "Puri Railway Station - 35 km",
+                    hospital: "Konark Health Centre - 2 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Chilika Lake",
@@ -146,7 +227,17 @@ const touristData = {
                     "/img/chilika_lake4.jpg"
                 ],
                 description: "Chilika Lake, Asia’s largest coastal lagoon, is a paradise for nature lovers and bird watchers. Spread across Odisha’s coastline, it is home to migratory birds from Siberia during winter and houses the rare Irrawaddy dolphins. The lake’s Satpada region is famous for dolphin sightings, while Kalijai Temple, located on an island, is a revered pilgrimage site.",
-                souvenir: "Hand-painted Pattachitra artwork of Chilika Lake."
+                souvenir: "Hand-painted Pattachitra artwork of Chilika Lake.",
+                nearest_locations: {
+                    bus_stop: "Satpada Bus Stop - 2 km",
+                    railway_station: "Balugaon Railway Station - 40 km",
+                    hospital: "Satpada CHC - 3 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Lingaraj Temple",
@@ -157,7 +248,17 @@ const touristData = {
                     "/img/lingeraj_temple3.jpg"
                 ],
                 description: "The Lingaraj Temple in Bhubaneswar is one of Odisha’s oldest and largest temples, dedicated to Lord Shiva. Built in the 11th century, it is a prime example of Kalinga architecture, featuring intricate carvings and a towering 150-foot spire. The temple’s Bindu Sagar Lake is considered sacred, and the temple remains an important pilgrimage site, attracting thousands of devotees.",
-                souvenir: "Stone-carved miniature temples."
+                souvenir: "Stone-carved miniature temples.",
+                nearest_locations: {
+                    bus_stop: "Lingaraj Temple Bus Stop - 500 m",
+                    railway_station: "Bhubaneswar Railway Station - 3 km",
+                    hospital: "Capital Hospital - 4 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Daringbadi",
@@ -169,7 +270,17 @@ const touristData = {
                     "/img/daringbadi4.webp"
                 ],
                 description: "Known as the 'Kashmir of Odisha,' Daringbadi is a picturesque hill station located in the Kandhamal district. With an elevation of 3,000 feet, it is the only place in Odisha where snowfall occurs in winter. The region is famous for its lush green valleys, waterfalls, coffee plantations, and pine forests, making it a perfect retreat for nature lovers.",
-                souvenir: "Organic coffee and tribal handicrafts."
+                souvenir: "Organic coffee and tribal handicrafts.",
+                nearest_locations: {
+                    bus_stop: "Daringbadi Bus Stop - 1 km",
+                    railway_station: "Berhampur Railway Station - 120 km",
+                    hospital: "Daringbadi CHC - 1.5 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Simlipal National Park",
@@ -181,7 +292,17 @@ const touristData = {
                     "/img/similipal4.webp"
                 ],
                 description: "Simlipal National Park, a UNESCO Biosphere Reserve, is Odisha’s largest wildlife sanctuary, located in Mayurbhanj district. It is home to Royal Bengal tigers, elephants, leopards, and over 200 species of birds. The park features picturesque waterfalls like Barehipani and Joranda, dense forests, and scenic meadows, offering a perfect escape for wildlife enthusiasts and trekkers.",
-                souvenir: "Handcrafted wooden animal figurines."
+                souvenir: "Handcrafted wooden animal figurines.",
+                nearest_locations: {
+                    bus_stop: "Baripada Bus Stop - 20 km",
+                    railway_station: "Balasore Railway Station - 70 km",
+                    hospital: "Baripada District Hospital - 25 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Khandagiri & Udaygiri",
@@ -193,7 +314,17 @@ const touristData = {
                     "/img/khandagiri_udaygiri4.webp"
                 ],
                 description: "The Khandagiri and Udayagiri Caves, located in Bhubaneswar, Odisha, are ancient rock-cut caves that date back to the 2nd century BCE. Built during the reign of King Kharavela, these caves were used as monastic dwellings for Jain monks. The Udayagiri Caves have beautifully carved inscriptions and sculptures, while the Khandagiri Caves offer panoramic views of the city. The Rani Gumpha (Queen’s Cave) in Udayagiri is the most famous for its intricate carvings.",
-                souvenir: "Miniature Rock Carvings – Small stone sculptures inspired by the cave carvings."
+                souvenir: "Miniature Rock Carvings – Small stone sculptures inspired by the cave carvings.",
+                nearest_locations: {
+                    bus_stop: "Khandagiri Bus Stop - 500 m",
+                    railway_station: "Bhubaneswar Railway Station - 6 km",
+                    hospital: "AIIMS Bhubaneswar - 8 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Hirakud Dam",
@@ -204,7 +335,17 @@ const touristData = {
                     "/img/hirakud3.jpg"
                 ],
                 description: "The Hirakud Dam, located on the Mahanadi River near Sambalpur, Odisha, is the longest earthen dam in the world, stretching over 25.8 km. Built in 1957, it plays a crucial role in flood control, irrigation, and hydroelectric power generation. The dam also forms the Hirakud Reservoir, which is a popular tourist spot offering boating, birdwatching, and scenic views from Gandhi Minar and Nehru Minar.",
-                souvenir: "Sambalpuri Handloom Products – Famous for Sambalpuri sarees, dupattas, and fabrics, representing the culture of the region."
+                souvenir: "Sambalpuri Handloom Products – Famous for Sambalpuri sarees, dupattas, and fabrics, representing the culture of the region.",
+                nearest_locations: {
+                    bus_stop: "Sambalpur Bus Stop - 6 km",
+                    railway_station: "Sambalpur Junction - 7 km",
+                    hospital: "VIMSAR, Burla - 8 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             }
         ],
         cost: "₹20,000 - ₹25,000/person",
@@ -236,7 +377,7 @@ const touristData = {
             }
         ]
     },
-    west_bengal: {
+    "west_bengal": {
         description: "West Bengal,known for its rich cultural heritage, historical landmarks, and scenic landscapes, offers a perfect blend of tradition and modernity. From the colonial charm of Kolkata to the serene hills of Darjeeling, the state is a paradise for travelers.",
         spots: [
             {
@@ -248,7 +389,17 @@ const touristData = {
                     "/img/victoriaMemorial3.jpg"
                 ],
                 description: "The Victoria Memorial, a stunning white marble structure in Kolkata, is one of India's most famous landmarks. Built in memory of Queen Victoria, it now serves as a museum showcasing British-era artifacts and paintings.",
-                souvenir: "Miniature Victoria Memorial models and books on Kolkata’s history."
+                souvenir: "Miniature Victoria Memorial models and books on Kolkata’s history.",
+                nearest_locations: {
+                    bus_stop: "Esplanade Bus Stop - 2 km",
+                    railway_station: "Howrah Junction - 5 km",
+                    hospital: "S.S.K.M. Hospital - 3 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Darjeeling",
@@ -259,7 +410,17 @@ const touristData = {
                     "/img/darjelling3.jpg"
                 ],
                 description: "Darjeeling, the 'Queen of the Hills,' is famous for its breathtaking tea gardens, colonial architecture, and the UNESCO-listed Darjeeling Himalayan Railway.",
-                souvenir: "Darjeeling Tea and handmade woolen shawls."
+                souvenir: "Darjeeling Tea and handmade woolen shawls.",
+                nearest_locations: {
+                    bus_stop: "Chowk Bazaar Bus Stand - 1 km",
+                    railway_station: "Darjeeling Railway Station - 2 km",
+                    hospital: "Darjeeling District Hospital - 3 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Sundarbans National Park",
@@ -270,7 +431,17 @@ const touristData = {
                     "/img/sundarban3.jpg"
                 ],
                 description: "Home to the majestic Royal Bengal Tiger, Sundarbans is the largest mangrove forest in the world and a UNESCO World Heritage Site.",
-                souvenir: "Wooden tiger figurines and honey from Sundarbans."
+                souvenir: "Wooden tiger figurines and honey from Sundarbans.",
+                nearest_locations: {
+                    bus_stop: "Canning Bus Stop - 45 km",
+                    railway_station: "Canning Railway Station - 45 km",
+                    hospital: "Canning Subdivision Hospital - 50 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Dakshineswar Kali Temple",
@@ -281,7 +452,17 @@ const touristData = {
                     "/img/kaliMandir3.jpg"
                 ],
                 description: "A revered Hindu temple dedicated to Goddess Kali, located on the banks of the Hooghly River, known for its spiritual ambiance and historical significance.",
-                souvenir: "Religious idols and Rudraksha malas."
+                souvenir: "Religious idols and Rudraksha malas.",
+                nearest_locations: {
+                    bus_stop: "Dakshineswar Bus Stop - 500 m",
+                    railway_station: "Dakshineswar Railway Station - 1 km",
+                    hospital: "R.G. Kar Medical College - 7 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             },
             {
                 name: "Digha Beach",
@@ -293,7 +474,17 @@ const touristData = {
 
                 ],
                 description: "Digha is a popular seaside resort town known for its golden beaches, water sports, and fresh seafood.",
-                souvenir: "Seashell artifacts and handmade jewelry."
+                souvenir: "Seashell artifacts and handmade jewelry.",
+                nearest_locations: {
+                    bus_stop: "Digha Bus Stop - 1 km",
+                    railway_station: "Digha Railway Station - 1 km",
+                    hospital: "Digha State General Hospital - 3 km"
+                },
+                emergency_contacts: {
+                    police: "100",
+                    ambulance: "102",
+                    fire: "101"
+                }
             }
         ],
         cost: "₹25,000 - ₹35,000/person",
