@@ -20,6 +20,7 @@ async function sendMessage() {
 
         try {
             const apiBaseUrl = "https://travel-api-1ya7.onrender.com";  // Hosted API
+            // const apiBaseUrl = "http://localhost:3000";  // Localhost API
             const response = await fetch(`${apiBaseUrl}/tourist-info?state=${encodeURIComponent(userInput)}`);
             const data = await response.json();
 
@@ -29,7 +30,7 @@ async function sendMessage() {
                 descriptionMessage.textContent = `📜 About ${userInput.charAt(0).toUpperCase() + userInput.slice(1)}: ${data.description}`;
                 descriptionMessage.style.margin = "10px";
                 descriptionMessage.style.fontWeight = "bold";
-                descriptionMessage.style.color = "black"; // Black text for description
+                descriptionMessage.style.color = "black";
                 messagesDiv.appendChild(descriptionMessage);
 
                 data.spots.forEach((spot) => {
@@ -37,9 +38,9 @@ async function sendMessage() {
                     botMessage.style.margin = "10px";
                     botMessage.style.padding = "10px";
                     botMessage.style.borderRadius = "8px";
-                    botMessage.style.backgroundColor = "rgba(0, 0, 0, 0.59)"; // Black with transparency
-                    botMessage.style.color = "white"; // White text
-                    botMessage.style.border = "1px solid rgba(255, 255, 255, 0.2)"; // Light white border
+                    botMessage.style.backgroundColor = "rgba(0, 0, 0, 0.59)";
+                    botMessage.style.color = "white";
+                    botMessage.style.border = "1px solid rgba(255, 255, 255, 0.2)";
                     botMessage.style.boxShadow = "0px 4px 8px rgba(255, 255, 255, 0.1)";
 
                     const placeName = document.createElement("h3");
@@ -81,11 +82,11 @@ async function sendMessage() {
 
                         const wikiLink = document.createElement("a");
                         wikiLink.href = spot.wikipedia;
-                        wikiLink.textContent = spot.name; // Place name instead of "Wikipedia"
+                        wikiLink.textContent = spot.name;
                         wikiLink.target = "_blank";
                         wikiLink.style.color = "red";
                         wikiLink.style.textDecoration = "underline";
-                        wikiLink.style.fontWeight = "bold"; // Bold text for Wikipedia link
+                        wikiLink.style.fontWeight = "bold";
 
                         wikiText.appendChild(wikiLink);
                     }
@@ -96,6 +97,44 @@ async function sendMessage() {
                         souvenirText.style.marginTop = "10px";
                         souvenirText.style.fontStyle = "italic";
                         botMessage.appendChild(souvenirText);
+                    }
+
+                    // Nearest Locations
+                    if (spot.nearest_locations) {
+                        const nearestLocTitle = document.createElement("h4");
+                        nearestLocTitle.textContent = "📍 Nearest Locations:";
+                        nearestLocTitle.style.marginTop = "10px";
+                        botMessage.appendChild(nearestLocTitle);
+
+                        const nearestLocList = document.createElement("ul");
+                        nearestLocList.style.marginTop = "5px";
+
+                        for (const [key, value] of Object.entries(spot.nearest_locations)) {
+                            const locItem = document.createElement("li");
+                            locItem.textContent = `${key.replace("_", " ")}: ${value}`;
+                            nearestLocList.appendChild(locItem);
+                        }
+
+                        botMessage.appendChild(nearestLocList);
+                    }
+
+                    // Emergency Contacts
+                    if (spot.emergency_contacts) {
+                        const emergencyTitle = document.createElement("h4");
+                        emergencyTitle.textContent = "🚨 Emergency Contacts:";
+                        emergencyTitle.style.marginTop = "10px";
+                        botMessage.appendChild(emergencyTitle);
+
+                        const emergencyList = document.createElement("ul");
+                        emergencyList.style.marginTop = "5px";
+
+                        for (const [key, value] of Object.entries(spot.emergency_contacts)) {
+                            const contactItem = document.createElement("li");
+                            contactItem.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`;
+                            emergencyList.appendChild(contactItem);
+                        }
+
+                        botMessage.appendChild(emergencyList);
                     }
 
                     messagesDiv.appendChild(botMessage);
@@ -111,19 +150,19 @@ async function sendMessage() {
                     foodSection.style.color = "white";
                     foodSection.style.border = "1px solid rgba(255, 255, 255, 0.2)";
                     foodSection.style.boxShadow = "0px 4px 8px rgba(255, 255, 255, 0.1)";
-                    
+
                     const foodTitle = document.createElement("h3");
                     foodTitle.textContent = "🍽️ Famous Foods";
                     foodSection.appendChild(foodTitle);
-                    
+
                     data.famous_foods.forEach((food) => {
                         const foodItem = document.createElement("div");
                         foodItem.style.marginTop = "10px";
-                        
+
                         const foodName = document.createElement("h4");
                         foodName.textContent = food.name;
                         foodItem.appendChild(foodName);
-                        
+
                         if (food.image) {
                             const foodImage = document.createElement("img");
                             foodImage.src = food.image;
@@ -132,14 +171,14 @@ async function sendMessage() {
                             foodImage.style.objectFit = "cover";
                             foodItem.appendChild(foodImage);
                         }
-                        
+
                         const foodDesc = document.createElement("p");
                         foodDesc.textContent = food.description;
                         foodItem.appendChild(foodDesc);
-                        
+
                         foodSection.appendChild(foodItem);
                     });
-                    
+
                     messagesDiv.appendChild(foodSection);
                 }
             } else {
